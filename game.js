@@ -76,17 +76,17 @@ class Field {
 
     gameDecision () {
         if (this._field[this._locationY] === undefined) {
-            console.log("You can't go through walls fool!");
+            console.log("You can't go through walls!");
             playing = false;
         }
         else {
             switch (this._field[this._locationY][this._locationX]) {
                 case hat:
-                    console.log("You win! Congrats on finding your damn hat");
+                    console.log("You win! Congrats on finding your hat");
                     playing = false;
                     break;
                 case hole:
-                    console.log("You lose sucka!");
+                    console.log("You lose! Try again next time!");
                     playing = false;
                     break;
                 case fieldCharacter:
@@ -98,7 +98,7 @@ class Field {
                     playing = false;
                     break;
                 case undefined:
-                    console.log("You can't go through walls fool!");
+                    console.log("You can't go through walls!");
                     playing = false;
                     break;
                 default:
@@ -163,7 +163,7 @@ class Field {
     
     gameDecision2() {
         if (this._field[this._locationY] == undefined) {
-            console.log("You can't go through walls fool!");
+            console.log("You can't go through walls!");
             playing = false;
         }
         else {
@@ -173,7 +173,7 @@ class Field {
                     playing = false;
                     break;
                 case hole:
-                    console.log("You lose sucka!");
+                    console.log("You lose! Try again next time!");
                     playing = false;
                     break;
                 case fieldCharacter:
@@ -191,7 +191,7 @@ class Field {
                     playing = false;
                     break;
                 case undefined:
-                    console.log("You can't go through walls fool!");
+                    console.log("You can't go through walls!");
                     playing = false;
                     break;
                 default:
@@ -219,7 +219,7 @@ if (gameMode == "N") {
     startGame();
 }
 else if (gameMode == "S") {
-    myField.generateField2(0.3);
+    myField.generateField2(0.2);
     startGame2();
 }
 
